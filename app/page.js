@@ -94,7 +94,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full xl:w-[35%]">
+        <div className="w-full xl:w-[60%]">
           <div className="bg-white rounded-2xl shadow-md p-5 sm:p-8 h-full flex items-center">
             <div className="w-full">
               <h2 className="text-xl sm:text-2xl font-extralight font-sans text-gray-800 mb-4">USER ID</h2>
