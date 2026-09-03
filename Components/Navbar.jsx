@@ -80,7 +80,9 @@ const Navbar = () => {
                     </ul>
                   )}
                 </li>
-                <li><a href="#contact" onClick={() => setMenuOpen(false)} className="block rounded-lg px-3 py-3 font-medium transition-colors hover:bg-red-50 hover:text-red-600">Contact Us</a></li>
+                   <li><a href="/blogs" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Blog</a></li>
+              <li><a href="/testResult" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Test Result</a></li>
+              <li><a href="/contact" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Contact Us</a></li>
               </ul>
             </div>
           )}
