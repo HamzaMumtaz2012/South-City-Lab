@@ -2,9 +2,10 @@
 import ServiceCard from "@/Components/ServiceCard";
 import { useState, useEffect } from "react";
 
+
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [menuOpen, setMenuOpen] = useState(false);
+ 
 
   const slides = [
     { id: 0, src: "/Slider01.jpg", alt: "South City Lab - Slide 1" },
@@ -47,49 +48,7 @@ export default function Home() {
         </div>
       </div>
 
-      <nav className="bg-white shadow-sm z-50 border-y border-red-200/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex-shrink-0">
-              <img className="h-10 sm:h-12 w-auto" src="/Logo.jpeg" alt="South City Lab Logo" />
-            </div>
-
-            <div className="md:hidden">
-              <button
-                type="button"
-                aria-label="Toggle menu"
-                aria-expanded={menuOpen}
-                onClick={() => setMenuOpen((prev) => !prev)}
-                className="inline-flex items-center justify-center rounded-md p-2 text-red-500 hover:bg-red-50 focus:outline-none"
-              >
-                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path strokeLinecap="round" strokeLinejoin="round" d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-                </svg>
-              </button>
-            </div>
-
-            <ul className="hidden md:flex items-center gap-6 lg:gap-8 text-sm lg:text-base">
-              <li><a href="#" className="text-red-400 font-semibold hover:text-red-600 transition-colors">Home</a></li>
-              <li><a href="#" className="text-red-400 hover:font-semibold transition-all">About</a></li>
-              <li><a href="#" className="text-red-400 hover:font-semibold transition-all">Locations</a></li>
-              <li><a href="#" className="text-red-400 hover:font-semibold transition-all">Covid Section</a></li>
-              <li><a href="#" className="text-red-400 hover:font-semibold transition-all">Contact Us</a></li>
-            </ul>
-          </div>
-
-          {menuOpen && (
-            <div className="md:hidden border-t border-gray-200 py-3">
-              <ul className="flex flex-col gap-3 px-1 text-red-500">
-                <li><a href="#" className="block font-semibold">Home</a></li>
-                <li><a href="#" className="block">About</a></li>
-                <li><a href="#" className="block">Locations</a></li>
-                <li><a href="#" className="block">Covid Section</a></li>
-                <li><a href="#" className="block">Contact Us</a></li>
-              </ul>
-            </div>
-          )}
-        </div>
-      </nav>
+     
 
       <div className="hero flex flex-col xl:flex-row xl:items-stretch max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8 gap-6 xl:gap-8">
         <div className="w-full xl:w-[65%]">
@@ -150,7 +109,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-white py-12 sm:py-16">
+      <div className="bg-white py-12 sm:py-16" id="about">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
             <div className="flex flex-col">
@@ -171,7 +130,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="services-section py-6 sm:py-10">
+      <div className="services-section py-6 sm:py-10" id="services">
         <div className="top text-center w-full px-4">
           <samp className="text-3xl sm:text-4xl lg:text-5xl block tracking-tighter text-red-500 my-2">Service We Offer</samp>
           <strong className="text-lg sm:text-2xl">Pathological Laboratory services including:</strong>
@@ -207,11 +166,11 @@ export default function Home() {
                   <samp className="text-base sm:text-lg font-medium text-red-600">The Trusted Leader In Caring</samp>
                   <samp className="text-base sm:text-lg font-medium text-red-600">For People & Advancing Health</samp>
                   <samp className="text-xl sm:text-3xl font-medium bg-gray-200 px-3 py-1 text-center w-full">FOR INTERNATIONAL PASSENGERS</samp>
-                  <samp className="w-full flex flex-wrap justify-center lg:justify-start gap-2 mt-2">
-                    <span><img className="inline-block h-10 sm:h-12 w-auto" src="/EmirateLogo.jpg" alt="Emirates" /></span>
-                    <span><img className="inline-block h-10 sm:h-12 w-auto" src="/QatarAirLineLogo.jpg" alt="Qatar Airways" /></span>
-                    <span><img className="inline-block h-10 sm:h-12 w-auto" src="/FlyDubaiLogo.jpg" alt="Fly Dubai" /></span>
-                  </samp>
+                  <div className="w-full flex flex-wrap justify-center lg:justify-start gap-2 mt-2">
+                    <span className="inline"><img className="inline h-10 sm:h-12 w-auto" src="/EmirateLogo.jpg" alt="Emirates" /></span>
+                    <span className="inline"><img className="inline h-10 sm:h-12 w-auto" src="/QatarAirLineLogo.jpg" alt="Qatar Airways" /></span>
+                    <span className="inline"><img className="inline h-10 sm:h-12 w-auto" src="/FlyDubaiLogo.jpg" alt="Fly Dubai" /></span>
+                  </div>
                   <div className="h-px w-full bg-red-600"></div>
                 </div>
               </div>
@@ -235,7 +194,7 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className="bg-white py-12 sm:py-16 border-t border-gray-200">
+      <footer  className="bg-white py-12 sm:py-16 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12">
             <div>

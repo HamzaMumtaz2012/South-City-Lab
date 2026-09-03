@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono , Glory } from "next/font/google";
 import "./globals.css"; 
+import Navbar from '../Components/Navbar'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +30,9 @@ export default function RootLayout({ children }) {
       <head>
         <script async src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        {children}</body>
     </html>
   );
 }
