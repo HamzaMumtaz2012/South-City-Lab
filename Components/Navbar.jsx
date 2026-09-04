@@ -58,7 +58,7 @@ const Navbar = () => {
               
               <li><a href="/blogs" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Blog</a></li>
               <li><a href="/gallery" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Gallery</a></li>
-              <li><a href="/testResult" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Test Result</a></li>
+              <li><a href="/onlineReports" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Online Reports</a></li>
               <li><a href="/contact" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Contact Us</a></li>
             </ul>
           </div>
@@ -85,7 +85,7 @@ const Navbar = () => {
                 </li>
                       <li><a href="/blogs" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Blog</a></li>
                     <li><a href="/gallery" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Gallery</a></li>
-              <li><a href="/testResult" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Test Result</a></li>
+              <li><a href="/onlineReports" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Online Reports</a></li>
               <li><a href="/contact" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Contact Us</a></li>
               </ul>
             </div>
