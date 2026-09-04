@@ -39,8 +39,8 @@ const Navbar = () => {
                   aria-haspopup="true"
                   className={`flex items-center gap-1 rounded-lg px-3 py-2 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-red-200 ${isOpen ? "bg-red-50 text-red-600" : "text-red-400 hover:bg-red-50 hover:text-red-600"}`}
                 >
-                
-                  Home
+                <a href="/">Home</a>
+                  
                   <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden="true" />
                 </button>
 
