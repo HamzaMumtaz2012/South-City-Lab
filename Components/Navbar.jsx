@@ -2,6 +2,8 @@
 import React from 'react'
 import { useState } from 'react';
 import { ChevronDown, Menu, X } from "lucide-react";
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Navbar = () => {
      const [menuOpen, setMenuOpen] = useState(false);
@@ -11,9 +13,9 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex-shrink-0">
-              <a href="/">
-              <img className="h-10 sm:h-12 w-auto" src="/Logo.jpeg" alt="South City Lab Logo" />
-              </a>
+              <Link href="/">
+                <Image className="h-10 sm:h-12 w-auto" src="/Logo.jpeg" width={180} height={60} alt="South City Lab Logo" />
+              </Link>
             </div>
 
             <div className="md:hidden">
@@ -45,7 +47,7 @@ const Navbar = () => {
                 {isOpen && (
                   <ul className="absolute right-0 top-full mt-2 w-48 rounded-xl border border-gray-100 bg-white p-2 shadow-lg ring-1 ring-black/5">
                     <li>
-                      <a href="#about" onClick={() => setIsOpen(false)} className="block rounded-lg px-3 py-2.5 font-medium text-gray-600 transition-colors hover:bg-red-50 hover:text-red-600">About Us</a>
+                      <Link href="/#about" onClick={() => setIsOpen(false)} className="block rounded-lg px-3 py-2.5 font-medium text-gray-600 transition-colors hover:bg-red-50 hover:text-red-600">About Us</Link>
                     </li>
                     <li>
                       <a href="#services" onClick={() => setIsOpen(false)} className="block rounded-lg px-3 py-2.5 font-medium text-gray-600 transition-colors hover:bg-red-50 hover:text-red-600">Services</a>
@@ -55,6 +57,7 @@ const Navbar = () => {
               </li>
               
               <li><a href="/blogs" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Blog</a></li>
+              <li><a href="/gallery" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Gallery</a></li>
               <li><a href="/testResult" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Test Result</a></li>
               <li><a href="/contact" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Contact Us</a></li>
             </ul>
@@ -80,7 +83,8 @@ const Navbar = () => {
                     </ul>
                   )}
                 </li>
-                   <li><a href="/blogs" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Blog</a></li>
+                      <li><a href="/blogs" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Blog</a></li>
+                    <li><a href="/gallery" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Gallery</a></li>
               <li><a href="/testResult" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Test Result</a></li>
               <li><a href="/contact" className="block rounded-lg px-3 py-2 font-medium text-red-400 transition-colors hover:bg-red-50 hover:text-red-600">Contact Us</a></li>
               </ul>
